@@ -34,9 +34,12 @@ public class UserFormViewController {
     }
 
     public void loadTestData(){
-        this.testLabel.setText(this.userDataService.getUserAdditionInfo(nameField.getText(),
-                                                                        ageField.getText(),
-                                                                        locationField.getText()));
+        String location = locationField.getText().trim();
+        String name = nameField.getText().trim();
+        String age = ageField.getText().trim();
+        this.testLabel.setText(this.userDataService.getUserAdditionInfo(name,
+                                                                        age,
+                                                                        location));
     }
 
 }

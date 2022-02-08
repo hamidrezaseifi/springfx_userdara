@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface IWeatherService {
     String getTestWeatherForecast();
-    String getWeatherForecastByLocation(String location);
+    String getWeatherForecastByLocation(String location) throws Exception;
     List<String> getLocationList();
 }
