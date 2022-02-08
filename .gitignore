@@ -33,3 +33,4 @@ build/
 .vscode/
 /.mvn/wrapper/
 /user.db
+/dependency-reduced-pom.xml
