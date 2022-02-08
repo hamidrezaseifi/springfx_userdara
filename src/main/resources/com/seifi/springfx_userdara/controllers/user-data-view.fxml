@@ -26,7 +26,7 @@
 
     <TextField fx:id="locationField" prefWidth="550.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
-    <Label fx:id="userAdditionInfoLabel" prefHeight="60.0" prefWidth="550.0" style="-fx-padding: 5 10 5 5; -fx-margin-top: 20; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label fx:id="infoLabel" prefHeight="60.0" prefWidth="550.0" style="-fx-padding: 5 10 5 5; -fx-margin-top: 20; -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
     <GridPane alignment="BASELINE_LEFT" hgap="10" prefWidth="550.0" styleClass="root" vgap="20" GridPane.columnIndex="1" GridPane.rowIndex="5">
         <Button onAction="#loadUserAdditionInfo" prefWidth="150.0" style="-fx-margin-top: 20;" GridPane.columnIndex="0" GridPane.rowIndex="0">Get Info</Button>
         <Button onAction="#saveUser" prefWidth="150.0" style="-fx-margin-top: 20;" GridPane.columnIndex="1" GridPane.rowIndex="0">Save Data</Button>

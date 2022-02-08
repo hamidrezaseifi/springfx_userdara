@@ -25,7 +25,10 @@ public class UserDataService implements IUserDataService {
     @Override
     public String getUserAdditionInfo(String name,
                                       int age,
-                                      String location) {
+                                      String location) throws Exception {
+
+        validateUserInputData(name, age, location);
+
         try {
             String weather  = this.weatherService.getWeatherForecastByLocation(location);
             return String.format(
@@ -43,12 +46,34 @@ public class UserDataService implements IUserDataService {
     @Override
     public UserDataEntity insert(String name,
                                  int age,
-                                 String location) {
-        return null;
+                                 String location) throws Exception {
+        validateUserInputData(name, age, location);
+
+        UserDataEntity entity = new UserDataEntity(name, age, location);
+
+        UserDataEntity result = this.userDataRepository.save(entity);
+        return result;
     }
 
     @Override
     public List<UserDataEntity> getSortedUserList() {
         return this.userDataRepository.findByOrderByIdDesc();
     }
+
+
+    private void validateUserInputData(String name,
+                                       int age,
+                                       String location) throws Exception {
+        if ((name == null) || name.trim().isEmpty()) {
+            throw new Exception("Invalid name!");
+        }
+        if ((location == null) || location.trim().isEmpty()) {
+            throw new Exception("Invalid name!");
+        }
+        if (age < 1) {
+            throw new Exception("Invalid name!");
+        }
+        this.weatherService.getWeatherForecastByLocation(location);
+    }
+
 }
