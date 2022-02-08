@@ -10,9 +10,21 @@
           fx:controller="com.seifi.springfx_userdara.controllers.UserFormViewController">
     <padding><Insets bottom="5" left="5" right="5" top="5" /></padding>
 
-    <Label fx:id="testLabel" prefHeight="60.0" prefWidth="550.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-    <Button onAction="#loadTestData" prefWidth="150.0" style="-fx-margin-top: 20;" GridPane.columnIndex="0"
-            GridPane.rowIndex="1">Get Info</Button>
+    <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+    <TextField fx:id="nameField" prefWidth="550.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label text="Age:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+    <TextField fx:id="ageField" prefWidth="550.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label text="Location:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+    <TextField fx:id="locationField" prefWidth="550.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Button onAction="#loadTestData" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="4">Get Info</Button>
+
+    <Label fx:id="testLabel" prefHeight="60.0" prefWidth="550.0" GridPane.columnIndex="0" GridPane.rowIndex="5" />
 
 
 
