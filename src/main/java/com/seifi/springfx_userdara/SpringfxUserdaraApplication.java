@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 public class SpringfxUserdaraApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringfxUserdaraApplication.class, args);
+		SpringApplication.run(UserDataJavaFxApplication.class, args);
 	}
 
 }

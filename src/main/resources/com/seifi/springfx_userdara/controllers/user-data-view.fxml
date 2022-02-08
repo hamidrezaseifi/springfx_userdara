@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="BASELINE_LEFT" hgap="10" prefHeight="100.0" prefWidth="650.0" styleClass="root" vgap="20"
+          xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.seifi.springfx_userdara.controllers.UserFormViewController">
+    <padding><Insets bottom="5" left="5" right="5" top="5" /></padding>
+
+    <Label fx:id="testLabel" prefHeight="60.0" prefWidth="550.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <Button onAction="#loadTestData" prefWidth="150.0" style="-fx-margin-top: 20;" GridPane.columnIndex="0"
+            GridPane.rowIndex="1">Get Info</Button>
+
+
+
+</GridPane>
