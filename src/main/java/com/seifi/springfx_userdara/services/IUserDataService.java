@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface IUserDataService {
 
-    String getUserAdditionInfo(String name, String age, String location);
+    String getUserAdditionInfo(String name, int age, String location);
 
-    UserDataEntity insert(String name, String age, String location);
+    UserDataEntity insert(String name, int age, String location);
 
     List<UserDataEntity> getSortedUserList();
 }

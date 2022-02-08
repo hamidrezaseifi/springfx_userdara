@@ -24,12 +24,12 @@ public class UserDataService implements IUserDataService {
 
     @Override
     public String getUserAdditionInfo(String name,
-                                      String age,
+                                      int age,
                                       String location) {
         try {
             String weather  = this.weatherService.getWeatherForecastByLocation(location);
             return String.format(
-                    "You are %s (%s years old) and are living at %s. The weather at your location is %s",
+                    "You are %s (%d years old) and are living at %s. The weather at your location is %s",
                     name,
                     age,
                     location,
@@ -42,13 +42,13 @@ public class UserDataService implements IUserDataService {
 
     @Override
     public UserDataEntity insert(String name,
-                                 String age,
+                                 int age,
                                  String location) {
         return null;
     }
 
     @Override
     public List<UserDataEntity> getSortedUserList() {
-        return null;
+        return this.userDataRepository.findByOrderByIdDesc();
     }
 }
