@@ -44,9 +44,9 @@ public class UserDataService implements IUserDataService {
     }
 
     @Override
-    public UserDataEntity insert(String name,
-                                 int age,
-                                 String location) throws Exception {
+    public UserDataEntity insertUser(String name,
+                                     int age,
+                                     String location) throws Exception {
         validateUserInputData(name, age, location);
 
         UserDataEntity entity = new UserDataEntity(name, age, location);
@@ -68,10 +68,10 @@ public class UserDataService implements IUserDataService {
             throw new Exception("Invalid name!");
         }
         if ((location == null) || location.trim().isEmpty()) {
-            throw new Exception("Invalid name!");
+            throw new Exception("Invalid location!");
         }
         if (age < 1) {
-            throw new Exception("Invalid name!");
+            throw new Exception("Invalid age!");
         }
         this.weatherService.getWeatherForecastByLocation(location);
     }

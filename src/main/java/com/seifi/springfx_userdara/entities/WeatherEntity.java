@@ -34,4 +34,10 @@ public class WeatherEntity {
     public void setWeather(String weather) {
         this.weather = weather;
     }
+
+
+    public boolean isEqual(WeatherEntity other){
+        return (this.weather == other.getWeather()) &&
+               (this.location == other.getLocation());
+    }
 }

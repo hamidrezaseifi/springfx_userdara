@@ -65,7 +65,7 @@ public class UserFormViewController implements Initializable {
             String name = nameField.getText().trim();
             int age = ageField.getValue();
             UserDataEntity
-                    result = userDataService.insert(name, age, location);
+                    result = userDataService.insertUser(name, age, location);
             loadUsers();
             this.infoLabel.setText("User data is saved with id: " + result.getId().toString());
         }

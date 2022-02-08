@@ -74,4 +74,11 @@ public class UserDataEntity {
         return String.format("%s (age: %d) at %s: id:%d", this.name, this.age, this.location, this.id);
     }
 
+    public boolean isEqual(UserDataEntity other){
+        return (this.id == other.getId()) &&
+               (this.name == other.getName()) &&
+               (this.age == other.getAge()) &&
+               (this.location == other.getLocation());
+    }
+
 }

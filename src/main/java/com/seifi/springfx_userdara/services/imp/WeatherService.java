@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class WeatherService implements IWeatherService {
+    public static String TEST_WAETHER_INO = "It's gonna snow a lot. Brace yourselves, the winter is coming.";
 
     private WeatherRepository weatherRepository;
     private Map<String, String> weathers;
@@ -23,6 +24,7 @@ public class WeatherService implements IWeatherService {
     }
 
     @PostConstruct
+    @Override
     public void initialize(){
         List<WeatherEntity> items = this.weatherRepository.findAll();
         if(items.isEmpty()){
@@ -39,7 +41,8 @@ public class WeatherService implements IWeatherService {
 
     @Override
     public String getTestWeatherForecast() {
-        return "It's gonna snow a lot. Brace yourselves, the winter is coming.";
+
+        return TEST_WAETHER_INO;
     }
 
     @Override
